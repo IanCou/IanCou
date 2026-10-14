@@ -15,5 +15,6 @@ CS at UMD (graduating May 2028), QUEST Honors. I do infrastructure. I like perfo
 - **Splatt** ([Devpost](https://devpost.com/software/splatt-72dxb8)): phone video to 3D Gaussian splats, $1K win
 
 **Find me**
-- LinkedIn: linkedin.com/in/iancoutinho
+- Website: [iancoutinho.net](https://www.iancoutinho.net)
+- LinkedIn: [linkedin.com/in/iancoutinho](https://www.linkedin.com/in/iancoutinho)
 - Email: iancoutinho40@gmail.com
