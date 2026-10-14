@@ -1,0 +1,230 @@
+:root {
+  --paper: #faf6ef;
+  --ink: #211a13;
+  --muted: #6f6355;
+  --accent: #d9552c;
+  --accent-soft: rgba(217, 85, 44, 0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background:
+    radial-gradient(1100px 500px at 85% -5%, rgba(217, 85, 44, 0.07), transparent 60%),
+    radial-gradient(900px 600px at -10% 30%, rgba(217, 85, 44, 0.05), transparent 55%),
+    var(--paper);
+  color: var(--ink);
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 9vh 24px 12vh;
+}
+
+/* ---------- hero ---------- */
+
+.hero { margin-bottom: 9vh; }
+
+.signature {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  display: block;
+  margin-left: -12px;
+  overflow: visible;
+}
+
+.sig-text {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 118px;
+}
+
+/* Each letter draws itself left-to-right, staggered like handwriting. */
+.sig-text tspan {
+  fill: rgba(33, 26, 19, 0);
+  stroke: var(--ink);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-dasharray: 420;
+  stroke-dashoffset: 420;
+  animation:
+    draw 0.55s ease forwards,
+    fillin 0.45s ease forwards;
+  animation-delay:
+    calc(0.35s + var(--d)),
+    calc(0.35s + var(--d) + 0.38s);
+}
+
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes fillin {
+  to { fill: rgba(33, 26, 19, 1); }
+}
+
+.honors {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.2rem;
+  opacity: 0;
+  animation: rise 0.9s ease 2.5s forwards;
+}
+
+.tagline {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+  opacity: 0;
+  animation: rise 0.9s ease 2.5s forwards;
+}
+
+.links {
+  margin-top: 1.1rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.6rem;
+  opacity: 0;
+  animation: rise 0.9s ease 2.8s forwards;
+}
+
+/* ---------- sections ---------- */
+
+section { margin-bottom: 7vh; }
+
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+ul { list-style: none; }
+
+li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-bottom: 0.65rem;
+}
+
+li::before {
+  content: "";
+  flex: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: 0.65em;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  border: 2px solid var(--accent);
+}
+
+a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.18s ease;
+}
+
+a::after {
+  content: "\2197";
+  font-size: 0.75em;
+  margin-left: 0.2em;
+}
+
+a:hover { border-bottom-color: var(--accent); }
+
+/* ---------- sub-bullets ---------- */
+
+.li-body { flex: 1; min-width: 0; }
+
+.sub {
+  list-style: none;
+  margin-top: 0.3rem;
+}
+
+.sub li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.25rem;
+  color: var(--muted);
+  font-size: 0.96em;
+}
+
+.sub li::before {
+  content: "\21B3";
+  flex: none;
+  width: auto;
+  height: auto;
+  margin-top: 0;
+  border: none;
+  background: none;
+  border-radius: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ---------- copy-email button ---------- */
+
+.copy-email {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+
+.copy-email:hover { border-bottom-color: var(--accent); }
+.copy-email.copied { color: var(--muted); }
+
+/* ---------- scroll reveal ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 560px) {
+  .sig-text { font-size: 96px; }
+  main { padding-top: 7vh; }
+  body { font-size: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sig-text tspan { animation: none; fill: var(--ink); stroke: none; }
+  .honors, .tagline, .links { animation: none; opacity: 1; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
