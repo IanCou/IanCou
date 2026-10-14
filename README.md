@@ -1,6 +1,6 @@
 ## Hi, I'm Ian.
 
-CS sophomore at UMD (graduating May 2028), QUEST Honors. I do infrastructure. I like performant and efficient systems.
+CS at UMD (graduating May 2028), QUEST Honors. I do infrastructure. I like performant and efficient systems.
 
 **What I do now**
 - Student SysAdmin @ UMIACS: bare-metal provisioning, Slurm, Puppet, and LDAP across a 40+ node GPU cluster used by 200+ researchers
@@ -17,5 +17,3 @@ CS sophomore at UMD (graduating May 2028), QUEST Honors. I do infrastructure. I 
 **Find me**
 - LinkedIn: linkedin.com/in/iancoutinho
 - Email: iancoutinho40@gmail.com
-
-Currently in team matching for a Google SWE internship, Summer 2027.
