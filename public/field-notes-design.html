@@ -16,10 +16,10 @@
         color-scheme: light;
         --paper: #f2f7fc;
         --surface: #ffffff;
-        --surface-2: #e5effa;
+        --surface-2: #e2ecf7;
         --ink: #172a43;
-        --muted: #60748e;
-        --line: #cfdeee;
+        --muted: #4d617a;
+        --line: #bfd0e3;
         --accent: #3d6fe0;
         --accent-2: #8ab8f5;
         --accent-soft: #d7e8fb;
@@ -107,16 +107,16 @@
       .timeline-step { color: var(--muted); font-size: 9px; }
       .road-date { color: var(--muted); font: 8px/1.45 var(--mono); }
       .road-card h3 { margin: 0 0 8px; font-family: var(--serif); font-size: 25px; font-weight: 500; letter-spacing: -.04em; }
-      .road-card p { margin: 0; color: var(--muted); font-size: 13px; }
+      .road-card p { margin: 0; color: var(--ink); font-size: 15px; font-weight: 500; line-height: 1.6; }
       .road-metrics { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
       .road-metric { flex: 1 1 120px; max-width: 164px; padding: 11px 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); }
       .road-metric strong { display: block; font-family: var(--serif); font-size: 24px; font-weight: 500; letter-spacing: -.045em; line-height: 1.1; }
       .road-metric span { display: block; margin-top: 5px; color: var(--muted); font: 9px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .04em; }
       .road-projects { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
       .road-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 15px; }
-      .road-links a { color: var(--accent); font-size: 11px; font-weight: 650; text-decoration: none; text-underline-offset: 4px; }
+      .road-links a { color: var(--accent); font-size: 12px; font-weight: 700; text-decoration: none; text-underline-offset: 4px; }
       .road-links a:hover { text-decoration: underline; }
-      .tag { padding: 5px 8px; border-radius: 999px; background: var(--surface-2); color: var(--muted); font-size: 9px; letter-spacing: .04em; }
+      .tag { padding: 5px 9px; border-radius: 999px; background: var(--surface-2); color: var(--ink); font-size: 10px; font-weight: 600; letter-spacing: .04em; }
       .roadmap-footnote { margin: 13px 0 0; color: var(--muted); font-size: 11px; }
 
       .milestone-heading { margin: 38px 0 0; }
@@ -125,11 +125,11 @@
       .milestone-timeline::before { position: absolute; top: 18px; bottom: 18px; left: 116px; width: 1px; background: var(--line); content: ""; }
       .milestone-item { position: relative; display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 54px; align-items: stretch; }
       .milestone-item::before { position: absolute; top: 19px; left: 111px; width: 11px; height: 11px; border: 3px solid var(--paper); border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 1px var(--accent); content: ""; }
-      .milestone-date { padding-top: 16px; color: var(--accent); font: 9px var(--mono); text-align: right; white-space: nowrap; }
-      .milestone-card { display: block; padding: 13px 17px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface); }
-      .milestone-card h4 { margin: 0; font-family: var(--serif); font-size: 19px; font-weight: 500; letter-spacing: -.025em; }
-      .milestone-card p { max-width: 760px; margin: 5px 0 0; color: var(--muted); font-size: 11px; text-align: left; }
-      .milestone-link { display: inline-block; margin-top: 8px; color: var(--accent); font-size: 10px; text-decoration-color: var(--line); text-underline-offset: 3px; }
+      .milestone-date { padding-top: 16px; color: var(--accent); font: 10px var(--mono); font-weight: 600; text-align: right; white-space: nowrap; }
+      .milestone-card { display: block; padding: 15px 19px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface); }
+      .milestone-card h4 { margin: 0; font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: -.025em; }
+      .milestone-card p { max-width: 760px; margin: 6px 0 0; color: var(--ink); font-size: 14px; font-weight: 500; line-height: 1.55; text-align: left; }
+      .milestone-link { display: inline-block; margin-top: 9px; color: var(--accent); font-size: 12px; font-weight: 650; text-decoration-color: var(--line); text-underline-offset: 3px; }
 
       .observability { overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: var(--surface); box-shadow: var(--shadow); }
       .obs-head { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 19px 23px; border-bottom: 1px solid var(--line); }
@@ -158,6 +158,13 @@
       .service-state { color: var(--muted); font: 10px var(--mono); }
       .obs-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; padding: 12px 20px; border-top: 1px solid var(--line); color: var(--muted); font: 9px var(--mono); }
       .obs-foot a { color: var(--accent); }
+      .status-preview { margin: 0; border-top: 1px solid var(--line); background: var(--surface); }
+      .status-preview img { display: block; width: 100%; height: auto; }
+      .status-preview figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; padding: 14px 20px; border-top: 1px solid var(--line); }
+      .status-preview-copy { display: grid; gap: 2px; }
+      .status-preview-copy strong { font-size: 14px; }
+      .status-preview-copy span { color: var(--muted); font-size: 12px; }
+      .status-preview figcaption a { color: var(--accent); font-size: 12px; font-weight: 650; }
 
       .journal-grid { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 15px; }
       .journal-card { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
@@ -329,6 +336,7 @@
               <div class="service-list"><h4>Public service checks</h4><div id="service-checks" aria-live="polite"><div class="service-row"><span class="service-name"><i class="status-dot" data-status="unknown" aria-hidden="true"></i>Loading checks</span><span class="service-state">Connecting</span></div></div></div>
             </div>
             <div class="obs-foot"><span id="metrics-note">Connecting to the public Hyades metrics endpoint</span><span>Updated: <time id="metrics-updated">—</time> · <a href="https://uptime.iancoutinho.net/status/portfolio" target="_blank" rel="noopener noreferrer">Public status page ↗</a></span></div>
+            <figure class="status-preview"><a href="https://uptime.iancoutinho.net/status/portfolio" target="_blank" rel="noopener noreferrer" aria-label="Open the live Hyades public status page"><img src="images/portfolio/homelab-status.jpg" alt="Snapshot of the public Hyades Uptime Kuma service status page with uptime history bars" width="1440" height="960" loading="lazy" /></a><figcaption><span class="status-preview-copy"><strong>Hyades public status</strong><span>Snapshot of the Uptime Kuma service monitor.</span></span><a href="https://uptime.iancoutinho.net/status/portfolio" target="_blank" rel="noopener noreferrer">Open live status page ↗</a></figcaption></figure>
           </div>
         </section>
 
