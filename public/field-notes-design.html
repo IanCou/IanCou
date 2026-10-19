@@ -256,7 +256,7 @@
       <header class="topbar">
         <a class="wordmark" href="#top" aria-label="Ian Coutinho, home"><span class="monogram">IC</span><span>Ian Coutinho</span></a>
         <nav class="topnav" aria-label="Main navigation">
-          <a href="#work">Work</a><a href="#observability">Homelab</a><a href="#journal">Journal</a><a href="#social">Social</a>
+          <a href="#observability">Homelab</a><a href="#work">Work</a><a href="#journal">Journal</a><a href="#social">Social</a>
         </nav>
       </header>
 
@@ -272,6 +272,23 @@
               <img src="images/portfolio/ian-coutinho.jpg" alt="Ian Coutinho" width="400" height="400" fetchpriority="high" />
             </figure>
             <div class="social-row"><a href="https://github.com/IanCou">GitHub ↗</a><a href="https://www.linkedin.com/in/iancoutinho">LinkedIn ↗</a><a href="mailto:iancoutinho40@gmail.com">Email ↗</a></div>
+          </div>
+        </section>
+
+        <section id="observability" aria-labelledby="obs-section-title">
+          <div class="section-head"><div><h2 id="obs-section-title">A window into the lab.</h2></div></div>
+          <div class="observability">
+            <div class="obs-head"><div class="obs-title"><span class="status-dot" id="fleet-status-dot" data-status="unknown" aria-hidden="true"></span><div><h3>Homelab / fleet overview</h3><p>3 nodes · 50+ self-hosted services · Proxmox</p></div></div><span class="demo-badge" id="metrics-status" data-state="loading" role="status" aria-live="polite">Connecting to Hyades</span></div>
+            <div class="obs-content">
+              <div class="metric-grid" aria-label="Live fleet metrics">
+                <article class="metric" data-metric="cpuPercent"><div class="metric-label">CPU utilization</div><div class="metric-value"><span data-value>—</span><small>%</small></div><div class="metric-meter" aria-hidden="true"><span data-meter></span></div></article>
+                <article class="metric" data-metric="memoryPercent"><div class="metric-label">Memory in use</div><div class="metric-value"><span data-value>—</span><small>%</small></div><div class="metric-meter" aria-hidden="true"><span data-meter></span></div></article>
+                <article class="metric" data-metric="storagePercent"><div class="metric-label">Storage capacity</div><div class="metric-value"><span data-value>—</span><small>%</small></div><div class="metric-meter" aria-hidden="true"><span data-meter></span></div></article>
+                <article class="metric" data-metric="availabilityPercent"><div class="metric-label">Fleet availability</div><div class="metric-value"><span data-value>—</span><small>%</small></div><div class="metric-meter" aria-hidden="true"><span data-meter></span></div></article>
+              </div>
+              <div class="service-list"><h4>Public service checks</h4><div id="service-checks" aria-live="polite"><div class="service-row"><span class="service-name"><i class="status-dot" data-status="unknown" aria-hidden="true"></i>Loading checks</span><span class="service-state">Connecting</span></div></div></div>
+            </div>
+            <div class="obs-foot"><span id="metrics-note">Connecting to the public Hyades metrics endpoint</span><span>Updated: <time id="metrics-updated">—</time> · <a href="https://uptime.iancoutinho.net/status/portfolio" target="_blank" rel="noopener noreferrer">Uptime Kuma status page ↗</a></span></div>
           </div>
         </section>
 
@@ -298,22 +315,7 @@
           </ol>
         </section>
 
-        <section id="observability" aria-labelledby="obs-section-title">
-          <div class="section-head"><div><h2 id="obs-section-title">A window into the lab.</h2></div></div>
-          <div class="observability">
-            <div class="obs-head"><div class="obs-title"><span class="status-dot" id="fleet-status-dot" data-status="unknown" aria-hidden="true"></span><div><h3>Homelab / fleet overview</h3><p>3 nodes · 50+ self-hosted services · Proxmox</p></div></div><span class="demo-badge" id="metrics-status" data-state="loading" role="status" aria-live="polite">Connecting to Hyades</span></div>
-            <div class="obs-content">
-              <div class="metric-grid" aria-label="Live fleet metrics">
-                <article class="metric" data-metric="cpuPercent"><div class="metric-label">CPU utilization</div><div class="metric-value"><span data-value>—</span><small>%</small></div><div class="metric-meter" aria-hidden="true"><span data-meter></span></div></article>
-                <article class="metric" data-metric="memoryPercent"><div class="metric-label">Memory in use</div><div class="metric-value"><span data-value>—</span><small>%</small></div><div class="metric-meter" aria-hidden="true"><span data-meter></span></div></article>
-                <article class="metric" data-metric="storagePercent"><div class="metric-label">Storage capacity</div><div class="metric-value"><span data-value>—</span><small>%</small></div><div class="metric-meter" aria-hidden="true"><span data-meter></span></div></article>
-                <article class="metric" data-metric="availabilityPercent"><div class="metric-label">Fleet availability</div><div class="metric-value"><span data-value>—</span><small>%</small></div><div class="metric-meter" aria-hidden="true"><span data-meter></span></div></article>
-              </div>
-              <div class="service-list"><h4>Public service checks</h4><div id="service-checks" aria-live="polite"><div class="service-row"><span class="service-name"><i class="status-dot" data-status="unknown" aria-hidden="true"></i>Loading checks</span><span class="service-state">Connecting</span></div></div></div>
-            </div>
-            <div class="obs-foot"><span id="metrics-note">Connecting to the public Hyades metrics endpoint</span><span>Updated: <time id="metrics-updated">—</time> · <a href="https://uptime.iancoutinho.net/status/portfolio" target="_blank" rel="noopener noreferrer">Uptime Kuma status page ↗</a></span></div>
-          </div>
-        </section>
+
 
         <section id="journal" aria-labelledby="journal-title">
           <div class="section-head"><div><h2 id="journal-title">Notes from the build.</h2></div></div>
